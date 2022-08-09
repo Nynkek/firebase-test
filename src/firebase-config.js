@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD81v53WoyTIvD6y78HgkLxNY9r_zeSMrM",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "fir-test-ec17e.firebaseapp.com",
     projectId: "fir-test-ec17e",
     storageBucket: "fir-test-ec17e.appspot.com",
