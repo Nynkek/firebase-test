@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import firebase from '../util/firebase';
+import {firebase} from '../firebase-config';
 
 export default function Form() {
     const [title, setTitle] = useState('');
@@ -19,7 +19,7 @@ export default function Form() {
     return (
         <div>
             <input type="text" onChange={handleOnChange} value={title} />
-            <button onClick={createTodo}>Add Todo</button>
+            <button onClick={createTodo}>Add to do</button>
         </div>
     );
 }

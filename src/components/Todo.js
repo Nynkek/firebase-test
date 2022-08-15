@@ -1,5 +1,5 @@
 import React from 'react';
-import firebase from '../util/firebase';
+import {firebase} from '../firebase-config';
 import '../App.css';
 
 export default function Todo({ todo }) {

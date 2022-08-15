@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import {db} from "./firebase-config";
+import '../App.css';
+import {db} from "../firebase-config";
 import {
     collection,
     getDocs,

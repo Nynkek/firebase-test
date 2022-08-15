@@ -1,11 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
-import firebase from 'firebase';
+import {getDatabase, ref, set} from "firebase/database"
+
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "fir-test-ec17e.firebaseapp.com",
+    databaseURL: "https://fir-test-ec17e-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "fir-test-ec17e",
     storageBucket: "fir-test-ec17e.appspot.com",
     messagingSenderId: "1079732807865",
@@ -13,10 +13,7 @@ const firebaseConfig = {
     measurementId: "G-NE2DELX8N0"
 };
 
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-export const db = getFirestore(app);
-export default firebase;
+export const firebase = getDatabase(app);
+const db = getDatabase();
+// const reference = ref(db, 'discs/' + 'id');
